@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url(navbar.css);
+@import url(footer.css);
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 15px;
+    color: #7a7a7a;
+    line-height: 28px;
+}
+.page-banner {
+    background-image: url("../image/page-banner-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0 90px 0;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .page-banner{
+        padding: 180px 0;
+    }
+}
+.page-banner h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.page-banner h2 em {
+    color: #ff565b;
+    font-style: normal;
+}
+@media (min-width: 768px) {
+    .page-banner h2{
+        font-size: 50px;
+    }
+}
+.page-banner p {
+    color: #ffffff;
+}
+
+
+
+.explore-item {
+    margin-top: 0;
+    padding-top: 60px;
+}
+@media (min-width: 576px) {
+    .explore-item {
+        margin-top: 60px;
+        padding-top: 60px;
+    }   
+}
+.section-heading {
+    margin-bottom: 30px;
+}
+.explore-item .section-heading h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 32px;
+}
+@media (min-width: 576px) {
+    .explore-item .section-heading h2 {
+        line-height: 48px;
+    }
+}
+.explore-item .main-image img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 7.5px;
+
+}
+.explore-item .project-info {
+    margin: 15px 0px 30px 0px;
+    background-color: #fafafa;
+    border-radius: 7.5px;
+    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+    position: relative;
+    padding: 30px;
+
+}
+@media (min-width: 992px) {
+    .explore-item .project-info {
+        margin: -140px 30px 80px 30px;
+        background-color: rgba(250, 250, 250, 0.9);
+        box-shadow: none;
+    }
+}
+.explore-item .project-info .info-item {
+    margin: 10px auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+@media (min-width: 992px) {
+    .explore-item .project-info .info-item {
+        margin: 0 auto;
+    }
+}
+.explore-item .project-info .info-item h6 {
+    font-size: 17px;
+    color: #2a2a2a;
+}
+.explore-item .project-info .info-item span {
+    font-size: 15px;
+    color: #7a7a7a;
+}
+.explore-item p{
+    margin-bottom: 60px;
+}
+.explore-item p a {
+    text-decoration: none;
+}
+.explore-item img {
+    margin-bottom: 15px;
+    border-radius: 7.5px;
+    width: 100%;
+    overflow: hidden;
+}
+@media (min-width: 992px) {
+    .explore-item img {
+        margin-bottom: 0px;
+    }
+}
+.explore-item .down-content h4 {
+    color: #2a2a2a;
+    font-size: 34px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+.explore-item .project-pagination {
+    border-top: 1px solid #eeeeee;
+    padding-top: 60px;
+}
+.explore-item .project-pagination img {
+    max-width: 60px;
+}
+@media (min-width:576px) {
+    .explore-item .project-pagination img {
+        max-width: 115px;
+    }   
+}
+.explore-item .project-pagination .right-content {
+    margin-left: 15px;
+    display: inline-block;
+}
+@media (min-width:992px) {
+    .explore-item .project-pagination .right-content {
+        margin-left: 25px;
+    }
+}
+.explore-item .project-pagination a {
+    text-decoration: none;
+}
+.explore-item .project-pagination .right-content h6 {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all .5s;
+    color: #2a2a2a;
+
+}
+@media (min-width:576px) {
+    .explore-item .project-pagination .right-content h6 {
+        margin-top: 28px;
+    }
+}
+.explore-item .project-pagination .right-content span {
+    font-size: 15px;
+    color: #7a7a7a;
+    text-transform: capitalize;
+}
+.explore-item .project-pagination .right-pagination {
+    margin-top: 15px;
+    padding-top: 30px;
+    border-top: 1px solid #eeeeee;
+    text-align: left;
+}
+@media (min-width:992px){
+    .explore-item .project-pagination .right-pagination {
+        margin-top: 0px;
+        padding-top: 0px;
+        border-top: none;
+    }
+}
+.explore-item .project-pagination .left-content {
+    margin-right: 15px;
+    display: inline-block;
+    text-align: right;
+}
+@media (min-width:992px) {
+    .explore-item .project-pagination .left-content {
+        margin-right: 25px;
+    }
+}
+.explore-item .project-pagination .left-content h6 {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all .5s;
+    color: #2a2a2a;
+    text-align: right;
+}
+@media (min-width:576px) {
+    .explore-item .project-pagination .left-content h6 {
+        padding-top: 20px;
+    }
+}
+.explore-item .project-pagination .left-content h6:hover, .explore-item .project-pagination .right-content h6:hover{
+    color: #ff565b;
+}
+.explore-item .project-pagination .left-content span {
+    font-size: 15px;
+    color: #7a7a7a;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+
+
+
+.call-to-action {
+    margin-top: 120px;
+    padding: 45px 0px;
+    background-color: #2a2a2a;
+}
+.call-to-action h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    text-align: center;
+    letter-spacing: .5px;
+}
+@media (min-width:992px) {
+    .call-to-action h2 {
+        font-size: 35px;
+        margin: 0;
+        text-align: left;
+    }
+}
+.call-to-action .white-button {
+    text-align: center;
+}
+@media (min-width:992px) {
+    .call-to-action .white-button {
+        text-align: right;
+    }   
+}
+.call-to-action .white-button a{
+    text-decoration: none;
+    padding: 11px 25px;
+    color: #ff565b;
+    font-weight: 400;
+    background-color: #ffffff;
+    border-radius: 7.5px;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: all .5s;
+}
+.call-to-action .white-button a:hover {
+    color: #ffffff;
+    background-color: #ff565b;
+}
+
+
+
+footer {
+    margin-top: 60px;
+}

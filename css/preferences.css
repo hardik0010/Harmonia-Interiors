@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Montserrat&display=swap");
+
+/* Colors */
+:root {
+  --primary-color: #d9ccc1;
+  --dark-primary-color: #c5b3a3;
+  --secondary-color: #8c7a70;
+  --dark-secondary-color: #59524f;
+  --white-color: #f0f0f2;
+  --dislike-color: #b71c1c;
+  --like-color: var(--secondary-color);
+}
+
+/* Typos */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+header > h1 + * {
+  font-family: 'Playfair Display', serif;
+  color: var(--dark-secondary-color);
+}
+
+/* Settings */
+:root {
+  --menu-size: 18em;
+  --card-width: 15em;
+  --perspective: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--main-typo);
+
+  @media screen and (max-width: 1200px) {
+    font-size: 0.8em;
+  }
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.25em;
+}
+
+h1,
+header > h1 + * {
+  font-family: var(--accent-typo);
+  color: var(--dark-secondary-color);
+}
+
+header > h1 + * {
+  font-size: 1.4em;
+  margin-top: 0;
+}
+
+.header {
+  position: fixed;
+  float: left;
+  width: var(--menu-size);
+  min-height: 100%;
+  color: var(--white-color);
+  background-color: var(--dark-secondary-color);
+}
+
+.header__menu ul {
+  padding-left: 2em;
+}
+
+.header__branding {
+  padding: 1.8em 1em 2em 1em;
+  font-size: 2.5em;
+  background-color: var(--secondary-color);
+  font-family: var(--special-typo);
+}
+
+.header__menuItem {
+  margin: 3em 0;
+  font-size: 1.2em;
+  perspective: var(--perspective);
+  perspective-origin: calc(1.25em * 0.5);
+}
+
+.header__menuItemIcon {
+  float: left;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.header__menuItemIcon svg {
+  width: 1.25em;
+  height: 1.25em;
+  fill: var(--white-color);
+  stroke: var(--white-color);
+}
+
+.header__menuItemLabel {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 1em;
+}
+
+.main {
+  float: right;
+  padding: 1.25em 2.5em;
+  width: calc(100% - var(--menu-size));
+  min-height: 100%;
+  background-color: var(--primary-color);
+}
+
+#cards {
+  max-width: 75em;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  height: var(--card-width);
+  width: var(--card-width);
+  background-color: var(--dark-primary-color);
+  border-radius: 25px;
+  margin: 2em 2em 0 0;
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+
+.card_favorited::after {
+  z-index: 1;
+  opacity: 1;
+}
+
+.card_hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+}
+
+.card__image {
+  width: var(--card-width);
+  height: 75%;
+  border-radius: 25px 25px 0 0;
+}
+
+.card__image img {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.card__image_loaded > img {
+  opacity: 1;
+}
+
+.card__choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+}
+
+.card__choice button {
+  font-size: 0.9em;
+  --size: 3em;
+  background-color: var(--dark-secondary-color);
+  width: var(--size);
+  height: var(--size);
+  border: none;
+  border-radius: calc(var(--size) / 2);
+  padding: 0.3em 0 0 0;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.card__choice button svg {
+  width: 1.3em;
+  height: 1.3em;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+}
+
+.card__choice button[data-action="dislike"]:hover,
+.card__choice button[data-action="dislike"]:focus {
+  background-color: var(--dislike-color);
+}
+
+.card__choice button[data-action="like"]:hover,
+.card__choice button[data-action="like"]:focus {
+  background-color: var(--like-color);
+}
+
+.overflowFixForSafari {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
